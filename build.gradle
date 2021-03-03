@@ -1,5 +1,6 @@
 plugins {
-    id 'java'
+
+    id 'application'
 }
 
 group 'com.wildmeerkat'
@@ -15,6 +16,13 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
 }
 
+run {
+    standardInput = System.in
+}
+
+application {
+    mainClass = "Solution"
+}
 test {
     useJUnitPlatform()
 }
